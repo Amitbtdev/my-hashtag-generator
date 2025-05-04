@@ -1,7 +1,12 @@
-#!/bin/bash
-# Install Python and FFmpeg
-apt-get update
-apt-get install -y python3 python3-pip ffmpeg
+#!/usr/bin/env bash
+# Fail on first error
+set -o errexit
 
 # Install Python dependencies
-pip3 install whisper==1.1.10
+pip install -r requirements.txt
+
+# Install Node dependencies
+npm install
+
+# Build frontend
+npm run build
