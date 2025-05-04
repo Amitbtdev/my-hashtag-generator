@@ -82,7 +82,7 @@ function authenticateToken(req, res, next) {
 
 const app = express();
 app.use(cors({
-    origin: 'https://hashtag-generator-f.onrender.com/',
+    origin: 'https://hashtag-generator-f.onrender.com',
 }));
 app.use(express.json());
 
