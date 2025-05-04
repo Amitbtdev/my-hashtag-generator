@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import api from './api';
 
 export default function History() {
     const [history, setHistory] = useState([]);
@@ -15,7 +15,7 @@ export default function History() {
             return;
         }
 
-        axios.get('/api/history', {
+        api.get('/api/history', {
             headers: {
                 Authorization: `Bearer ${token}`
             }

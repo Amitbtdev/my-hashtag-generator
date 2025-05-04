@@ -81,7 +81,9 @@ function authenticateToken(req, res, next) {
 // —————— App Setup ——————
 
 const app = express();
-app.use(cors());
+app.use(cors({
+    origin: 'https://hashtag-generator-f.onrender.com/',
+}));
 app.use(express.json());
 
 mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })

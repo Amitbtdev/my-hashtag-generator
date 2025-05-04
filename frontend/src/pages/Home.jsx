@@ -1,7 +1,7 @@
 // src/pages/Home.jsx
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import axios from 'axios'
+import api from './api'
 import { UploadCloud, Loader2, Hash, FileText } from 'lucide-react'
 
 export default function Home() {
@@ -37,7 +37,7 @@ export default function Home() {
         try {
             const form = new FormData()
             form.append('media', file)
-            const res = await axios.post('/api/generate', form, {
+            const res = await api.post('/api/generate', form, {
                 headers: { 'Content-Type': 'multipart/form-data' },
             })
 
