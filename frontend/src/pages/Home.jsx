@@ -1,7 +1,7 @@
 // src/pages/Home.jsx
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import api from './api'
+import api from '../api'
 import { UploadCloud, Loader2, Hash, FileText } from 'lucide-react'
 
 export default function Home() {
